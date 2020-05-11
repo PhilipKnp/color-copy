@@ -81,10 +81,11 @@ window.addEventListener("paste", function(e){
 
                   //RGBA Value
                   //rgbaValue.textContent = 'RGBA: (' + data[0] + ', ' + data[1] + ', ' + data[2] + ', ' + (data[3] / 255) + ')';
-                  colorPreview.style.backgroundColor = rgba;
+                  
                   //document.getElementById('body').style.backgroundColor = rgba;
 
                   canvas.addEventListener('click', function(){
+                    colorPreview.style.backgroundColor = rgba;
                       document.getElementById('hexValue').textContent =  "#" + r + g + b + a;
                       rgbaValue.textContent = '(' + data[0] + ', ' + data[1] + ', ' + data[2] + ', ' + (data[3] / 255) + ')';
                       var hslaValue = kwulers.getHSLFromRGB([data[0], data[1], data[2]]);
