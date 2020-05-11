@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="style.css">
+    <title>ColorCopy.io</title>
+</head>
+<body>
+    <h1 class="pageTitle">ColorCopy.io</h1>
+    <div class="main_container">
+        <div id="imageContainer" class="image_container">
+            <div id="instructions" class="instructions_container">
+                <h2>- 1. Take a Screenshot of the Color you want -</h2>
+                    <p class="os_names">Windows:&nbsp; <kbd>⊞ Win</kbd><span class="plus_symbol">+</span><kbd>⇧ Shift</kbd><span class="plus_symbol">+</span><kbd>S</kbd></p>
+                    <p class="os_names">Mac OS:&nbsp; <kbd>⌘</kbd><span class="plus_symbol">+</span><kbd>⇧ Shift</kbd><span class="plus_symbol">+</span><kbd>4</kbd></p>
+                    <p class="os_names">Linux:&nbsp; <kbd>Alt</kbd><span class="plus_symbol">+</span><kbd>PrintScr</kbd></p>
+                    <h2 class="paste_header">- 2. Then Paste it -</h2>
+                    <p class="os_names">Windows & Linux:&nbsp; <kbd>Ctrl</kbd><span class="plus_symbol">+</span><kbd>V</kbd></p>
+                    <p class="os_names reduce_space">Mac OS:&nbsp; <kbd>⌘</kbd><span class="plus_symbol">+</span><kbd>V</kbd></p><br>
+            </div>
+            <canvas id="screenshotCanvas"></canvas>
+        </div>
+        <div class="settings">
+            <div class="zoom_container">
+                <canvas id="zoomCanvas" width="150" height="150"></canvas>
+                <canvas id="zoomCrosshair" width="150" height="150"></canvas>
+                <div id="colorPreview"></div>
+            </div>
+            <div class="btn_container">
+                <p class="colorCodes">HEX:  <span id="hexValue" class="color_codes_spacing"></span></p><button id="hexCopyBtn" class="copy_btn_styling" >Copy <img src="copy-regular.svg" class="copy_icon"></button>
+                <p class="colorCodes">RGBA: <span id="rgbaValue" class="color_codes_spacing"></span></p><button id="rgbaCopyBtn" class="copy_btn_styling" data-clipboard-target="#rgbaValue">Copy <img src="copy-regular.svg" class="copy_icon"></button>
+                <p class="colorCodes">HSLA: <span id="hslaValue" class="color_codes_spacing"></span></p><button id="hslaCopyBtn" class="copy_btn_styling" data-clipboard-target="#hslaValue">Copy <img src="copy-regular.svg" class="copy_icon"></button>
+                <p id="copyNotification">Copied to Clipboard!</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="kwulers.min.js"></script>
+    <script src="clipboard.min.js"></script>
+    <script src="dragscroll.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
